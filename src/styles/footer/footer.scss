@@ -1,0 +1,327 @@
+.PageFooter {
+    padding-top: 50px;
+    line-height: 2;
+    
+    .Footer-container {
+        padding: 0 24px;
+
+        .Inner {
+            margin-bottom: 50px;
+            color: #5c5c5c;
+
+            .footer-text {
+                .text-title {
+                    margin-bottom: 20px;
+                }
+
+                .text-desc {
+                    color: #939393;
+                    font-size: 1.1em;
+                }
+
+                .text-link {
+                    display: flex;
+                    padding-left: 0;
+                    margin-top: 20px;
+                    padding-bottom: 40px;
+                    li {
+                        list-style: none;
+                        padding-right: 28px;
+                        a{
+                            text-decoration: none;
+                            color: #939393;
+                            font-size: 1.2em;
+                        }
+
+                        a:hover {
+                            color: #5c5c5c;
+                        }
+                    }
+                }
+            }
+
+            .ftlink {
+                padding-left: 0;
+                margin-top: 20px;
+                padding-bottom: 40px;
+                li {
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: #939393;
+                        font-size: 1.1em;
+                        transition: .3s;
+                    }
+
+                    a:hover {
+                        color: #5c5c5c;
+                    }
+                }
+            }
+
+            .footer-newsletter {
+                .news-desc {
+                    font-size: 1.1em;
+                    color: #939393;
+                    margin: 20px 0;
+                }
+
+                .news-textbox {
+                    width: 100%;
+                    padding: 7px 14px;
+                    border: 1px solid #e7e7e7;
+                    margin-bottom: 30px;
+                    outline: none;
+                }
+
+                .news-btn {
+                    padding: 15px 25px;
+                    background-color: transparent;
+                    color: white;
+                    text-decoration: none;
+                    letter-spacing: .1em;
+                    position: relative;
+                    border: 1px solid black;
+                }
+
+                a.news-btn::before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #5c5c5c;
+                    transform: scale(1,1);
+                    transform-origin: left center;
+                    z-index: -1;
+                    transition: transform .45s cubic-bezier(.785, .135, .15, .86);
+                }
+                a.news-btn:hover::before {
+                    transform: scale(0,1);
+                    transform-origin: right center;
+                }
+                a.news-btn:hover {
+                    color: #5c5c5c;
+                }
+            }
+        }
+
+        .Aside {
+            text-align: center;
+            .aside-cash {
+                padding-bottom: 20px;
+                color: #939393;
+                .cash2 {
+                    display: flex;
+                    font-size: 14px;
+
+                    .cash-btn2 {
+                        position: relative;
+                        .cash-option-box2 {
+                            position: fixed;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 4;
+                            visibility: hidden;
+                            transform: translateY(100%);
+                            transition: all .3s ease;
+                            background-color: white;
+                            box-shadow: -2px 4px 16px 0px rgba(0, 0, 0, 0.288);
+
+                            .cash-option-header {
+                                text-align: center;
+                                padding: 13px 20px;
+                                border-bottom: 1px solid #c5c5c5;
+                                .header-btn2 {
+                                    float: left;
+                                }
+                            }
+
+                            .cash-option2 {
+                                margin-bottom: 0;
+                                padding: 18px 0;
+                                width: 100vw;
+                                line-height: 2;
+                                li {
+                                    list-style: none;
+    
+                                    a {
+                                        text-decoration: none;
+                                        color: #858585;
+                                    }
+                                }
+                            }
+                        }
+
+                        .cash-option-btn {
+                            cursor: pointer;
+                        }
+
+                        .cash-option-box-active2 {
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+            .aside-copyright {
+                padding-bottom: 50px;
+                color: #5c5c5c;
+                .text1 {
+                    font-size: 12px;
+                }
+                .text2 {
+                    font-size: 1.1em;
+                }
+            }
+
+            .aside-payment {
+                justify-content: space-between;
+                padding: 28px 0;
+                border-top: 1px solid #efefef;
+                margin-left: -25px;
+                margin-right: -25px;
+                li {
+                    display: inline-block;
+                    margin: 6px 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .PageFooter {
+        .Footer-container {
+            .Inner {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .footer-col-sm-6 {
+                    width: 50%;
+                    margin-bottom: 50px;
+                    padding: 0 40px;
+                }
+            }
+        
+            .Aside {
+                display: flex;
+                .aside-cash {
+                    text-align: center;
+                }
+                .aside-copyright {
+                    text-align: left;
+                }
+
+                .aside-col-sm-6 {
+                    width: 50%;
+                    padding: 0 40px;
+                }
+        
+                .aside-payment {
+                    border: none;
+                    text-align: right;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .PageFooter {
+        .Footer-container {
+            .Aside {
+                .aside-cash {
+                    .cash2 {
+                        .cash-btn2 {
+                            position: unset;
+                            .cash-option-btn {
+                                position: relative;
+                            }
+                            .cash-option-box2 {
+                                position: absolute;
+                                display: none;
+
+                                bottom: unset;
+                                left: unset;
+                                z-index: unset;
+                                visibility: unset;
+                                transform: unset;
+                                transition: unset;
+                                background-color: unset;
+                                box-shadow: unset;
+
+                                .cash-option-header {
+                                    display: none;
+                                }
+
+                                .cash-option2 {
+                                    margin-bottom: unset;
+                                    width: unset;
+
+                                    position: relative;
+                                    border: 1px solid white;
+                                    background-color: white;
+                                    padding: 20px 35px;
+                                    line-height: 2;
+                                    top: -170px;
+                                    box-shadow: -2px 4px 16px 0px rgba(0, 0, 0, 0.288);
+                
+                                    li {
+                                        list-style: none;
+                
+                                        a {
+                                            text-decoration: none;
+                                            color: #858585;
+                                        }
+                                    }
+                                }
+                
+                                .cash-option2::after{
+                                    content: '';
+                                    position: absolute;
+                                    left: 35%;
+                                    bottom: -10px;
+                                    width: 0;
+                                    height: 0;
+                                    border-right: 12px solid transparent;
+                                    border-left: 12px solid transparent;
+                                    border-top: 10px solid white;
+                                    clear: both;
+                                }
+                            }
+                
+                            .cash-option-box-active2 {
+                                display: block;
+                                visibility: unset;
+                                transform: unset;
+                                z-index: 4;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    
+}
+
+@media (min-width: 1140px) {
+    .PageFooter {
+        .Footer-container {
+            .Inner {
+                .footer-col-lg-3 {
+                    width: 25%;
+                    margin-bottom: 50px;
+                    padding: 0 40px;
+                }
+            }
+        }
+    }
+}
